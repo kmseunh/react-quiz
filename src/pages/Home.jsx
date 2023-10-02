@@ -1,10 +1,9 @@
-import { useContext } from 'react';
-import { AuthContext } from '../contexts/AuthContext';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth';
 
 const Home = () => {
-    // AuthContext로부터 사용자 정보와 로그인, 로그아웃 함수 가져오기
-    const { user, loginUser, logoutUser } = useContext(AuthContext);
+    // useAuth Hook을 사용하여 사용자 정보와 로그인, 로그아웃 함수 가져오기
+    const { user, loginUser, logoutUser } = useAuth();
 
     return (
         <div>
